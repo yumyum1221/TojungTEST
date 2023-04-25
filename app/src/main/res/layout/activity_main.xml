@@ -6,34 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/left_chat_view"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:layout_width="383dp"
+        android:layout_height="163dp"
+        android:id="@+id/chatscroll"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="@color/green"
-        android:orientation="horizontal"
-        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintVertical_bias="0.937"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/chatting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
             android:fontFamily="@font/gangwon"
+            android:maxLines="100"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
             android:text="Chatgpt대답"
             android:textColor="@color/black"
             android:textSize="40sp"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="27dp"
-            tools:layout_editor_absoluteY="333dp" />
-    </LinearLayout>
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="467dp" />
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/option_view"
@@ -66,5 +68,51 @@
             android:textColor="@color/black"
             android:textSize="40sp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63"
+        android:text="버튼"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/quesview"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/purple_200"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/ques"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gangwon"
+            android:text="질문"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.357"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
